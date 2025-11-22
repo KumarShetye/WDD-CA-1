@@ -1,40 +1,97 @@
-h1{
+/*KUMAR SHETYE*/
+/*DESKTOP VIEW*/
+/*Page 3 - Why Climate Action is Critical?*/
+.page3 h1{
+	text-align: center; /*This is to align the header to the center of the page, note that we use ".page3 h1" as I have wrapped everything within the body tag in a div to ensure that only the contents of page3 will be modified by the CSS*/
+}
+
+.page3 h2{				/*This is to align the second header to the center of the page*/
 	text-align: center;
+	font-size: 18px;
 }
 
-.image{
-	width: 900px;
-	height: 250px;
+.page3 .image{			/*This is to set the dimensions of the image*/
+	width: 97%;
+	height: 50%;
 }
 
-.p1{
+.page3 .p1{				/*This is to make a box around the paragraph, setting the size and if the text overflows then a scroll bar will appear enabling the user to scroll through the paragraph within the box*/
 	border-style: solid;
-	width: 900px;
-	height: 250px
+	width: 97%;
+	height: 50%;
+	font-size: 110%;
+	padding: 3%;
+	overflow-y: auto;
 }
 
-button{
+.page3 button{			/*This is to center the button*/
 	display: block;
 	margin: 0 auto;
 }
 
-.image2{
-	display: block;
-	width: 1800px;
-	height: 600px;
-	margin: 0px auto;
+.page3 .row{			/*This is to remove the vertical gap between rows*/
+	margin-bottom: -13%;
+}
+/*Page 4 - Effects of Climate Change*/
+.page4 h1{				/*Centering the first header*/
+	text-align: center;
 }
 
-.p2{
+.page4 h2{				/*Centering the second header*/
+	text-align: center;
+	font-size: 18px;
+}
+
+.page4 .image2{			/*Setting the dimensions for the image*/
+	height: 250px;
+	width: 86%;
+}
+
+.page4 .p2{				/*This is to make a box around the paragraph, setting the size and if the text overflows then a scroll bar will appear enabling the user to scroll through the paragraph within the box*/
 	border-style: solid;
-	width: 538px;
+	width: 86%;
 	height: 250px;
 	margin: auto;
+	overflow-y: auto;
+	padding: 3%;
 }
 
-.btn{
-	margin: auto;
-	width: 538px;
-	height: 250px;
-
+.page4 .btn{		/*To set the position of the button*/
+	padding-left: 42%;
+	padding-top: 14%;
 }
+
+.page4 .row {
+    margin-bottom: 2px; /* smaller vertical gap */
+}
+
+.page4 button{
+	display: block;
+	margin: 0 auto;
+}
+
+/*MOBILE VIEW*/
+@media (max-width: 760px){
+	/*Page 3 - Why Climate Action is Critical?*/
+	.navbar-brand img {		/*Adjusts the size of the navbar when the screen is smaller for both page 3 and page 4*/
+		width: 45px;
+		height: 45px;
+	}
+	.page3 .image{			/*Adjusts the size of the image*/
+	width: 100%;
+	height: 215px;
+	margin-bottom: 8%;
+	object-fit: cover;
+	}
+	.page3 .p1{				/*This is to make a box around the paragraph, setting the size and if the text overflows then a scroll bar will appear enabling the user to scroll through the paragraph within the box*/
+	border-style: solid;
+	width: 100%;
+	height: 215px;
+	font-size: 10px;
+	padding: 10px;
+	overflow-y: auto;
+	}
+	.page3 .row{		/* smaller vertical gap */
+		margin-bottom: 25px;
+	}
+ 

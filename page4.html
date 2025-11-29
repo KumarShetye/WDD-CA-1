@@ -124,7 +124,7 @@
 				<br></br>
 				<div class="row">
 					<div class="col-12 col-md-4 order-2 order-md-1">
-						<p class="p2">Climate change is affecting ecosystems worldwide, from pollinators like bees to forests and oceans. Rising temperatures, habitat loss, and pollution threaten the balance of nature that humans rely on for food, water, and clean air.</p>
+						<p class="p2" data-stats="Pollinator populations have declined by over 40% in the last decade, threatening crop production worldwide. Around 75% of global food crops rely on pollination by bees, butterflies, and other insects.">Climate change is affecting ecosystems worldwide, from pollinators like bees to forests and oceans. Rising temperatures, habitat loss, and pollution threaten the balance of nature that humans rely on for food, water, and clean air.</p>
 						<br></br>
 					</div>
 					<div class="col-12 col-md-4 order-1 order-md-2">
@@ -132,7 +132,7 @@
 						<br></br>
 					</div>
 					<div class="col-12 col-md-4 order-3 order-md-3">
-						<p class="p2">Immediate action is essential to protect biodiversity and maintain healthy ecosystems. By reducing emissions, conserving habitats, and supporting sustainable practices, we can ensure a more resilient planet for future generations.</p>
+						<p class="p2" data-stats="The decline in pollinators is linked to pesticide use, habitat loss, and climate change. If these trends continue, agricultural productivity and food security for billions of people could be severely affected.">Immediate action is essential to protect biodiversity and maintain healthy ecosystems. By reducing emissions, conserving habitats, and supporting sustainable practices, we can ensure a more resilient planet for future generations.</p>
 						<br></br>
 					</div>
 				</div>
@@ -145,7 +145,7 @@
 				<br></br>
 				<div class="row">
 					<div class="col-12 col-md-4 order-2 order-md-1">
-						<p class="p2">Extreme weather events, such as wildfires, droughts, and floods, are becoming increasingly common due to climate change. These events not only destroy natural habitats but also impact human communities and agriculture.</p>
+						<p class="p2" data-stats="Global forest fires have increased by 50% since 2000, releasing massive amounts of CO2 into the atmosphere. These fires destroy habitats, displace communities, and contribute to extreme weather events.">Extreme weather events, such as wildfires, droughts, and floods, are becoming increasingly common due to climate change. These events not only destroy natural habitats but also impact human communities and agriculture.</p>
 						<br></br>
 					</div>
 					<div class="col-12 col-md-4 order-1 order-md-2">
@@ -153,18 +153,41 @@
 						<br></br>
 					</div>
 					<div class="col-12 col-md-4 order-3 order-md-3">
-						<p class="p2">Mitigating climate change requires both global and local efforts, from transitioning to renewable energy to restoring forests. Every action contributes to reducing risks and protecting both the environment and the people who depend on it.</p>
+						<p class="p2" data-stats="Rising temperatures and prolonged droughts caused by climate change make forests more vulnerable to wildfires. Immediate climate action can reduce these risks and protect both ecosystems and human settlements.">Mitigating climate change requires both global and local efforts, from transitioning to renewable energy to restoring forests. Every action contributes to reducing risks and protecting both the environment and the people who depend on it.</p>
 						<br></br>
 					</div>
 				</div>
 			</div>		
 			<br></br>
 
-			<!--Button to learn more--!>
-			<button type="button">Learn More!</button>
+			<!--Button to view statistics which replaced the contents of the p tags--!>
+			<button class= "learn-more-btn" type="button">Statistics for Nerds</button>
 			<br></br>
 
-				<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+				
+			<script>
+			const button = document.querySelector(".learn-more-btn");
+			const paragraphs = document.querySelectorAll(".page4 .p2");
+
+			button.addEventListener("click", () => {
+			  paragraphs.forEach(p => {
+				// Store original text if not stored
+				if (!p.dataset.original) {
+				  p.dataset.original = p.textContent;
+				}
+
+				// Toggle text
+				if (p.textContent === p.dataset.original) {
+				  p.textContent = p.dataset.stats;
+				  button.textContent = "Show Original";
+				} else {
+				  p.textContent = p.dataset.original;
+				  button.textContent = "Statistics for Nerds";
+				}
+			  });
+			});
+			</script>
 		</div>
 	</body>
 </html>

@@ -46,7 +46,7 @@
 					<div class="container">
 						<!-- Brand (TOPIC NAME) -->
 					<a class="navbar-brand fw-bold text-white" href="home.html">
-					  <img src="logo.png" width="60px">
+					  <img src="logo.png" alt="Image for the logo of the website" width="60px">
 					  Climate Action
 					</a>
 
@@ -123,7 +123,7 @@
 			<div class="container-fluid first-row">
 				<div class="row">
 					<div class="col-sm-6 order-1 order-sm-1">
-						<img src="kumar2.jpg" class="image" alt="Dummy Image">
+						<img src="kumar2.jpg" class="image" alt="Image of a person handing the Earth to another hand.">
 						<br></br>
 					</div>
 					<div class="col-sm-6 order-2 order-sm-2">	
@@ -139,7 +139,7 @@
 						<p class="p1" data-stats="Sea ice has decreased by 40% in the last 40 years, threatening penguin habitats. Melting ice also raises sea levels, endangering coastal communities.">The temperatures are rising critically melting the ice caps and destroying the habitats for the wildlife species and animals such as these poor penguins. As the ice melts, the sea levels rise and the animals who have adapted to the cold will struggle to survive in this changing world. Pushing many of them to extinction. It is essential that we protect the vulnerable ecosystems and maintain the delicate balance that of which is supporting both the wildlife and the human life.</p>
 					</div>
 					<div class="col-sm-6 order-1 order-sm-2">
-						<img src="kumar3.jpg" class="image" alt="Dummy Image">
+						<img src="kumar3.jpg" class="image" alt="Image of penguins on an iceberg">
 						<br></br>
 					</div>
 				</div>
@@ -149,7 +149,7 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-sm-6 order-1 order-sm-1">
-						<img src="kumar4.jpg" class="image" alt="Dummy Image">
+						<img src="kumar4.jpg" class="image" alt="Image of a timeclock above the sea">
 						<br></br>
 					</div>
 					<div class="col-sm-6 order-2 order-sm-2">
@@ -159,35 +159,37 @@
 			</div>
 			<br></br>
 			
-			<!--Button to view statistics which replaced the contents of the p tags--!>
-			<button class= "learn-more-btn" type="button">Statistics for Nerds</button>
-			<br></br>
-			
-			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+			<!--Form Section-->
+
+				<form>
+					<p>Was this page informative?</p>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+						<label for="yes" class="form-check-label" for="exampleRadios1">
+						Yes
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+						<label for="no" class="form-check-label" for="exampleRadios1">
+						No
+						</label>
+						<br></br>
+						<label for="feedback" class="form-label">Tell us your thoughts on Why Climate Action is critical!</label><br>
+						<textarea type="text" id="feedback" placeholder="Enter your thoughts"></textarea><br><br>
+						<input class="bg-success" type="submit" value="Submit">
+					</div>
+				</form>
+				<br><br>
 			
 			<script>
-			const button = document.querySelector(".learn-more-btn");
-			const paragraphs = document.querySelectorAll(".page3 .p1");
-
-			button.addEventListener("click", () => {
-			  paragraphs.forEach(p => {
-				// Store original text if not stored
-				if (!p.dataset.original) {
-				  p.dataset.original = p.textContent;
-				}
-
-				// Toggle text
-				if (p.textContent === p.dataset.original) {
-				  p.textContent = p.dataset.stats;
-				  button.textContent = "Show Original";
-				} else {
-				  p.textContent = p.dataset.original;
-				  button.textContent = "Statistics for Nerds";
-				}
-			  });
-			});
+        function validateForm() {
+			//const used when variable will not change and can assign a value on declration
+            const name = document.getElementById("yes").value;
+            const addr = document.getElementById("no").value;
+            const email = document.getElementById("feedback").value;
 			</script>
-
+	
 		</div>
 	</body>
 </html>

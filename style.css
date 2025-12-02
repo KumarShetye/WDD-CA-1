@@ -72,7 +72,6 @@ body{
     height: 380px;        /* matches the image height exactly */
     font-size: 110%;
     padding: 5%;
-    
     display: flex;        /* centers the text vertically */
     justify-content: center;
     align-items: center;
@@ -93,6 +92,7 @@ body{
 .page3 .row{			/*This is to remove the vertical gap between rows*/
 	margin-bottom: 2%;
 }
+
 /*Page 4 - Effects of Climate Change*/
 .page4 h1{				/*Centering the first header*/
 	text-align: center;
@@ -160,6 +160,35 @@ body{
     font-size: 18px;
     border-radius: 8px;     /* optional: smooth shape */
 }
+
+form {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #F0FAEB;
+	border-style: solid;
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+input[type="text"],
+textarea {
+	width: 80%;
+	height: 5%;
+	padding: 10px;
+	margin: 5px 0;
+	border-style: solid;
+	border-color: #000000;
+	box-sizing: border-box;
+	font-size: 16px;	
 }
 
-	
+input[type="submit"]{
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	cursor: pointer;
+	font-size: 16px;	
+}
+

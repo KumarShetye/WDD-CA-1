@@ -27,16 +27,15 @@
     background-color: #e0e0e0 !important;  /* stronger grey */              
 }
 
+/*Targets the font for the navbar*/
 a{
 	font-family: "Poppins", sans-serif;
 	font-weight: 700;
 	font-style: normal;
 }
 
-
-/*DESKTOP VIEW*/
 /*Page 3 - Why Climate Action is Critical?*/
-body{
+.body1{
 	background-color: #FDFFE5;
 }
 
@@ -57,11 +56,12 @@ body{
 
 .page3 .image{
     width: 97%;
-    height: 380px;        /* fixed height so all 3 rows match */
-    object-fit: cover;    /* keeps image from stretching */
-    border-style: solid;
+    height: 380px;        
+    object-fit: cover;    /* Keeps image from stretching */
+    border-style: solid;  /* Makes the solid border around the image */
 	border-width: 5px;
 	border-color: #000000;
+	border-radius: 13px;  /* Makes the edges of the border curved */
 }
 
 .page3 .p1{
@@ -69,31 +69,63 @@ body{
 	border-width: 5px;
 	border-color: #000000;
     width: 97%;
-    height: 380px;        /* matches the image height exactly */
+    height: 380px;        /* Matches the image height exactly */
     font-size: 110%;
     padding: 5%;
-    display: flex;        /* centers the text vertically */
+    display: flex;        /* Centers the text vertically */
     justify-content: center;
-    align-items: center;
-    text-align: center;
+    align-items: center; /* Aligns the content to the center */
+    text-align: center;  /* Aligns the position of the text to the center */
 	background-color: #F0FAEB;
 	font-family: "Poppins", sans-serif;
 	font-weight: 400;
 	font-style: normal;
-}
-
-}
-
-.page3 button{			/*This is to center the button*/
-	display: block;
-	margin: 0 auto;
+	border-radius: 13px;
 }
 
 .page3 .row{			/*This is to remove the vertical gap between rows*/
-	margin-bottom: 2%;
+	margin-bottom: 2%; 
 }
 
+.formKumar{
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #F0FAEB;
+	border-style: solid;
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	border-radius: 13px;
+}
+input[type="text"],
+textarea {
+	width: 80%;
+	height: 5%;
+	padding: 10px;
+	margin: 5px 0;
+	border-style: solid;
+	border-color: #000000;
+	box-sizing: border-box;
+	font-size: 16px;
+	border-radius: 13px;	
+}
+
+input[type="submit"]{
+	color: #fff;
+	border: none;
+	border-radius: 10px;
+	padding: 10px 20px;
+	cursor: pointer;
+	font-size: 16px;	
+}
+
+
 /*Page 4 - Effects of Climate Change*/
+.body2{
+	background-color: #FDFFE5;
+}
+
 .page4 h1{				/*Centering the first header*/
 	text-align: center;
 	font-family: "Poppins", sans-serif;
@@ -121,6 +153,7 @@ body{
 	border-style: solid;
 	border-width: 5px;
 	border-color: #000000;
+	border-radius: 13px;
 }
 
 .page4 .p2{				/*This is to make a box around the paragraph, setting the size and if the text overflows then a scroll bar will appear enabling the user to scroll through the paragraph within the box*/
@@ -138,57 +171,11 @@ body{
 	background-color: #F0FAEB;
 	justify-content: center;
 	font-size: 110%;
+	border-radius: 13px;
 }
-
-.page3 button{
-    display: block;
-    margin: 20px auto;      /* centers left and right + adds spacing */
-    padding: 12px 28px;     /* optional: nicer button size */
-    font-size: 18px;
-    border-radius: 8px;     /* optional: smooth shape */
-}
-
 
 .page4 .row {
     margin-bottom: 2px; /* smaller vertical gap */
 }
 
-.page4 button{
-	display: block;
-    margin: 20px auto;      /* centers left and right + adds spacing */
-    padding: 12px 28px;     /* optional: nicer button size */
-    font-size: 18px;
-    border-radius: 8px;     /* optional: smooth shape */
-}
-
-form {
-	max-width: 600px;
-	margin: 0 auto;
-	padding: 20px;
-	background-color: #F0FAEB;
-	border-style: solid;
-	font-family: "Poppins", sans-serif;
-	font-weight: 400;
-	font-style: normal;
-}
-input[type="text"],
-textarea {
-	width: 80%;
-	height: 5%;
-	padding: 10px;
-	margin: 5px 0;
-	border-style: solid;
-	border-color: #000000;
-	box-sizing: border-box;
-	font-size: 16px;	
-}
-
-input[type="submit"]{
-	color: #fff;
-	border: none;
-	border-radius: 5px;
-	padding: 10px 20px;
-	cursor: pointer;
-	font-size: 16px;	
-}
 

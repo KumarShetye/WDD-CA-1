@@ -35,9 +35,8 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 		
-		<!-- Note that all fonts were gathered from Google Fonts -->
 	</head>
-	<body>
+	<body class="body1">
 		<div class="page3">
 			<!-- NAVBAR (Guys, everyone must use this nav bar in their pages) -->
 
@@ -119,24 +118,24 @@
 			<h2>By Kumar Shetye</h2>
 			<br></br>
 			
-			 <!--First Row--!>
-			<div class="container-fluid first-row">
+			 <!-- First Row -->
+			<div class="container-fluid first-row">  <!-- Spans across whole screen -->
 				<div class="row">
-					<div class="col-sm-6 order-1 order-sm-1">
+					<div class="col-sm-6 order-1 order-sm-1">  <!-- col-sm-6 means that the column will take 6 out of 12 grid spaces , leading to the layout of the columns being two side by side. order-1 means it will come first, and order-2 means it will come second, however order-sm-1 means it will come first on desktop, and order-sm-2 means it will come second on desktop -->
 						<img src="kumar2.jpg" class="image" alt="Image of a person handing the Earth to another hand.">
 						<br></br>
 					</div>
 					<div class="col-sm-6 order-2 order-sm-2">	
-						<p class="p1" data-stats="Over 90% of scientists agree climate change is caused by humans. Global CO2 levels are the highest in 3 million years.">Climate Action is critical due to the vitality of the planet laying in our own hands. Through each generation who walks this soil, its our actions in the present moment that determine the kind of world we will pass onto the future generation, our kids, our grandkids. Looking after the environment isn't just an environmental responsibility, however its our moral duty, that we must look after this planet better than the way we found it and ensure the future generations will thrive in a healthy and sustainable planet.</p>
+						<p class="p1">Climate Action is critical due to the vitality of the planet laying in our own hands. Through each generation who walks this soil, its our actions in the present moment that determine the kind of world we will pass onto the future generation, our kids, our grandkids. Looking after the environment isn't just an environmental responsibility, however its our moral duty, that we must look after this planet better than the way we found it and ensure the future generations will thrive in a healthy and sustainable planet.</p>
 					</div>
 				</div>
 			</div>
 			
-			<!--Second Row--!>
+			<!-- Second Row -->
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-sm-6 order-2 order-sm-1">
-						<p class="p1" data-stats="Sea ice has decreased by 40% in the last 40 years, threatening penguin habitats. Melting ice also raises sea levels, endangering coastal communities.">The temperatures are rising critically melting the ice caps and destroying the habitats for the wildlife species and animals such as these poor penguins. As the ice melts, the sea levels rise and the animals who have adapted to the cold will struggle to survive in this changing world. Pushing many of them to extinction. It is essential that we protect the vulnerable ecosystems and maintain the delicate balance that of which is supporting both the wildlife and the human life.</p>
+						<p class="p1">The temperatures are rising critically melting the ice caps and destroying the habitats for the wildlife species and animals such as these poor penguins. As the ice melts, the sea levels rise and the animals who have adapted to the cold will struggle to survive in this changing world. Pushing many of them to extinction. It is essential that we protect the vulnerable ecosystems and maintain the delicate balance that of which is supporting both the wildlife and the human life.</p>
 					</div>
 					<div class="col-sm-6 order-1 order-sm-2">
 						<img src="kumar3.jpg" class="image" alt="Image of penguins on an iceberg">
@@ -145,7 +144,7 @@
 				</div>
 			</div>
 			
-			<!--Third Row--!>
+			<!-- Third Row -->
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-sm-6 order-1 order-sm-1">
@@ -153,28 +152,35 @@
 						<br></br>
 					</div>
 					<div class="col-sm-6 order-2 order-sm-2">
-						<p class="p1" <p class="p1" data-stats="Global sea levels have risen 20 cm since 1900, and extreme weather events are increasing. Immediate climate action can prevent irreversible damage.">This climate change is not a distant threat, its here and time is ticking day by day. The longer we continue to walk this path of delayed action the more costly it will become to reverse the damages that are caused by the greenhouse gas emissions and the extreme weather events. If we act now, we can hinder the effects of climate change, save the coastal communites and prevent the irreversible harm towaeds the planet that we depend on.</p>
+						<p class="p1">This climate change is not a distant threat, its here and time is ticking day by day. The longer we continue to walk this path of delayed action the more costly it will become to reverse the damages that are caused by the greenhouse gas emissions and the extreme weather events. If we act now, we can hinder the effects of climate change, save the coastal communites and prevent the irreversible harm towaeds the planet that we depend on.</p>
 					</div>
 				</div>
 			</div>
 			<br></br>
 			
-			<!--Form Section-->
-
-				<form>
+			<!-- Form Section -->
+				<form class="formKumar" name="FeedbackForm" onsubmit="return validateForm()"> <!-- onsubmit triggers the JavaScript -->
+				
+				<!-- Yes radio button -->
 					<p>Was this page informative?</p>
-					<div class="form-check">
-						<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
-						<label for="yes" class="form-check-label" for="exampleRadios1">
+					<div class="yesRadio">
+						<input class="form-check-input" type="radio" name="radio" id="radio1" value="option1">
+						<label for="yes" class="form-check-label" for="radio1">
 						Yes
 						</label>
 					</div>
-					<div class="form-check">
-						<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
-						<label for="no" class="form-check-label" for="exampleRadios1">
+					
+				<!-- No radio button -->
+					<div class="noRadio">
+						<input class="form-check-input" type="radio" name="radio" id="radio2" value="option1">
+						<label for="no" class="form-check-label" for="radio2">
 						No
 						</label>
 						<br></br>
+					</div>
+					
+				<!-- Text feedback box -->	
+					<div>
 						<label for="feedback" class="form-label">Tell us your thoughts on Why Climate Action is critical!</label><br>
 						<textarea type="text" id="feedback" placeholder="Enter your thoughts"></textarea><br><br>
 						<input class="bg-success" type="submit" value="Submit">
@@ -182,14 +188,44 @@
 				</form>
 				<br><br>
 			
+			<!-- JavaScript for Form -->
 			<script>
-        function validateForm() {
-			//const used when variable will not change and can assign a value on declration
-            const name = document.getElementById("yes").value;
-            const addr = document.getElementById("no").value;
-            const email = document.getElementById("feedback").value;
+				function validateForm() { 
+				// querySelector is basically searching for the radio buttons to see if they are checked
+				const selectedRadio = document.querySelector('input[name="radio"]:checked');
+				
+				// This sees what the user typed in the textbox, ".trim" removes spaces so the user cannot just type (space)
+				const feedback = document.getElementById("feedback").value.trim();
+
+				// If none of the radio buttons are selected then it will tell you to select one of the radio options
+				if (!selectedRadio) {
+					alert("Please select Yes or No.");
+					return false; 
+				}
+
+				// If there is no input in the text box, the alert will tell you to enter something in the text box
+				if (feedback === "") {
+					alert("Please enter your thoughts before submitting.");
+					return false;
+				}
+
+				// Alert to let you know that your form has been successfully submitted
+				alert("Thank you for feedback!");
+				return true;
+			}
+						
 			</script>
 	
+			<!-- JavaScript for Bootstrap -->
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+			
 		</div>
 	</body>
 </html>
+			<!-- Aknowledgements/Crdits -->
+			<!-- Note that all the images were sources from Pixabay a royalty free images website -->
+			<!-- The text content for this page was generated using ChatGPT -->
+			<!-- The Nav bar was created by Khant Si Thu Hien -->
+			<!-- Note that all fonts were gathered from Google Fonts -->
+			<!-- Some elements of this page was created using Bootstrap & W3Schools elements -->
+			
